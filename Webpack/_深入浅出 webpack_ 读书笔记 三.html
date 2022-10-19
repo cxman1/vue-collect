@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>《深入浅出 webpack》 读书笔记 三 | 光之晨曦🌟🌟🌟</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/vue-collect/favicon.ico">
+    <meta name="description" content="技术需要沉淀,十年方能磨一剑">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/vue-collect/assets/css/0.styles.9c971594.css" as="style"><link rel="preload" href="/vue-collect/assets/js/app.65dbe37a.js" as="script"><link rel="preload" href="/vue-collect/assets/js/3.c628116f.js" as="script"><link rel="preload" href="/vue-collect/assets/js/1.c6af9e45.js" as="script"><link rel="preload" href="/vue-collect/assets/js/80.6515ad1d.js" as="script"><link rel="prefetch" href="/vue-collect/assets/js/10.49dc210d.js"><link rel="prefetch" href="/vue-collect/assets/js/11.0241e6b2.js"><link rel="prefetch" href="/vue-collect/assets/js/12.0d2455c0.js"><link rel="prefetch" href="/vue-collect/assets/js/13.edf374e0.js"><link rel="prefetch" href="/vue-collect/assets/js/14.b03f0e8c.js"><link rel="prefetch" href="/vue-collect/assets/js/15.66653b42.js"><link rel="prefetch" href="/vue-collect/assets/js/16.4940672d.js"><link rel="prefetch" href="/vue-collect/assets/js/17.33558916.js"><link rel="prefetch" href="/vue-collect/assets/js/18.5d930a67.js"><link rel="prefetch" href="/vue-collect/assets/js/19.1d318bc4.js"><link rel="prefetch" href="/vue-collect/assets/js/20.aacec794.js"><link rel="prefetch" href="/vue-collect/assets/js/21.3485ac8a.js"><link rel="prefetch" href="/vue-collect/assets/js/22.61a68164.js"><link rel="prefetch" href="/vue-collect/assets/js/23.5bb509b8.js"><link rel="prefetch" href="/vue-collect/assets/js/24.7cae988b.js"><link rel="prefetch" href="/vue-collect/assets/js/25.bb4941c3.js"><link rel="prefetch" href="/vue-collect/assets/js/26.7b48c5be.js"><link rel="prefetch" href="/vue-collect/assets/js/27.06391115.js"><link rel="prefetch" href="/vue-collect/assets/js/28.b1458ba3.js"><link rel="prefetch" href="/vue-collect/assets/js/29.58a1b085.js"><link rel="prefetch" href="/vue-collect/assets/js/30.53621a4a.js"><link rel="prefetch" href="/vue-collect/assets/js/31.d78395fc.js"><link rel="prefetch" href="/vue-collect/assets/js/32.76f9ef38.js"><link rel="prefetch" href="/vue-collect/assets/js/33.a7772550.js"><link rel="prefetch" href="/vue-collect/assets/js/34.78492257.js"><link rel="prefetch" href="/vue-collect/assets/js/35.35f389ea.js"><link rel="prefetch" href="/vue-collect/assets/js/36.990857ef.js"><link rel="prefetch" href="/vue-collect/assets/js/37.0785c583.js"><link rel="prefetch" href="/vue-collect/assets/js/38.63f36ade.js"><link rel="prefetch" href="/vue-collect/assets/js/39.ccfbdf6b.js"><link rel="prefetch" href="/vue-collect/assets/js/4.ac0d0ae4.js"><link rel="prefetch" href="/vue-collect/assets/js/40.534906f9.js"><link rel="prefetch" href="/vue-collect/assets/js/41.c3e68c4e.js"><link rel="prefetch" href="/vue-collect/assets/js/42.684da874.js"><link rel="prefetch" href="/vue-collect/assets/js/43.8121c3dc.js"><link rel="prefetch" href="/vue-collect/assets/js/44.17ab1a4b.js"><link rel="prefetch" href="/vue-collect/assets/js/45.cd25cb57.js"><link rel="prefetch" href="/vue-collect/assets/js/46.ca85633c.js"><link rel="prefetch" href="/vue-collect/assets/js/47.21933d59.js"><link rel="prefetch" href="/vue-collect/assets/js/48.24868115.js"><link rel="prefetch" href="/vue-collect/assets/js/49.3ed8af59.js"><link rel="prefetch" href="/vue-collect/assets/js/5.fb700727.js"><link rel="prefetch" href="/vue-collect/assets/js/50.354ff064.js"><link rel="prefetch" href="/vue-collect/assets/js/51.8c2b338b.js"><link rel="prefetch" href="/vue-collect/assets/js/52.c686d8c7.js"><link rel="prefetch" href="/vue-collect/assets/js/53.57b20e69.js"><link rel="prefetch" href="/vue-collect/assets/js/54.52ef563f.js"><link rel="prefetch" href="/vue-collect/assets/js/55.8269d62b.js"><link rel="prefetch" href="/vue-collect/assets/js/56.836f31a1.js"><link rel="prefetch" href="/vue-collect/assets/js/57.fa5c908d.js"><link rel="prefetch" href="/vue-collect/assets/js/58.99fac64e.js"><link rel="prefetch" href="/vue-collect/assets/js/59.38a1c8e4.js"><link rel="prefetch" href="/vue-collect/assets/js/6.8b581b02.js"><link rel="prefetch" href="/vue-collect/assets/js/60.01f241ff.js"><link rel="prefetch" href="/vue-collect/assets/js/61.7585e3cd.js"><link rel="prefetch" href="/vue-collect/assets/js/62.5d2acbb1.js"><link rel="prefetch" href="/vue-collect/assets/js/63.1692b0a2.js"><link rel="prefetch" href="/vue-collect/assets/js/64.b78c448c.js"><link rel="prefetch" href="/vue-collect/assets/js/65.6de8cea8.js"><link rel="prefetch" href="/vue-collect/assets/js/66.c2e8b91b.js"><link rel="prefetch" href="/vue-collect/assets/js/67.179b49f9.js"><link rel="prefetch" href="/vue-collect/assets/js/68.3acbcc4f.js"><link rel="prefetch" href="/vue-collect/assets/js/69.7269f116.js"><link rel="prefetch" href="/vue-collect/assets/js/7.fc92c449.js"><link rel="prefetch" href="/vue-collect/assets/js/70.325daea0.js"><link rel="prefetch" href="/vue-collect/assets/js/71.5f3f7b27.js"><link rel="prefetch" href="/vue-collect/assets/js/72.cbb9eeee.js"><link rel="prefetch" href="/vue-collect/assets/js/73.1bb373b5.js"><link rel="prefetch" href="/vue-collect/assets/js/74.27677327.js"><link rel="prefetch" href="/vue-collect/assets/js/75.c71706ec.js"><link rel="prefetch" href="/vue-collect/assets/js/76.77b1a3f7.js"><link rel="prefetch" href="/vue-collect/assets/js/77.878b1d47.js"><link rel="prefetch" href="/vue-collect/assets/js/78.e79c8644.js"><link rel="prefetch" href="/vue-collect/assets/js/79.40e51d12.js"><link rel="prefetch" href="/vue-collect/assets/js/8.15bebc7e.js"><link rel="prefetch" href="/vue-collect/assets/js/81.430e9e16.js"><link rel="prefetch" href="/vue-collect/assets/js/82.accf7c86.js"><link rel="prefetch" href="/vue-collect/assets/js/83.d176ca6f.js"><link rel="prefetch" href="/vue-collect/assets/js/84.2b19c1b9.js"><link rel="prefetch" href="/vue-collect/assets/js/85.43182d27.js"><link rel="prefetch" href="/vue-collect/assets/js/86.c43652ad.js"><link rel="prefetch" href="/vue-collect/assets/js/87.c7d25eac.js"><link rel="prefetch" href="/vue-collect/assets/js/88.efdf28e7.js"><link rel="prefetch" href="/vue-collect/assets/js/89.5f5859a2.js"><link rel="prefetch" href="/vue-collect/assets/js/9.31803082.js"><link rel="prefetch" href="/vue-collect/assets/js/90.830dffd8.js">
+    <link rel="stylesheet" href="/vue-collect/assets/css/0.styles.9c971594.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>光之晨曦🌟🌟🌟</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>晨曦</span>
+            
+          <span data-v-64685f0e>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-collect/" class="home-link router-link-active"><img src="/vue-collect/logo.jpg" alt="光之晨曦🌟🌟🌟" class="logo"> <span class="site-name">光之晨曦🌟🌟🌟</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-collect/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      前端开发
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/FrontEnd/" class="nav-link"><i class="iconfont undefined"></i>
+  FrontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/GraphQL/" class="nav-link"><i class="iconfont undefined"></i>
+  GraphQL
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/推荐文档/" class="nav-link"><i class="iconfont undefined"></i>
+  推荐文档
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/浏览器相关/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      JS指南
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/basics/" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础相关
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/script/" class="nav-link"><i class="iconfont undefined"></i>
+  ECMAScript 6
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  OOP面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/design/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Vue相关</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/vue/jichu/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue基础相关
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/tuozhan/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue官方生态
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/hexin/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue.js的设计核心
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      性能优化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端缓存</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/pages/http/" class="nav-link"><i class="iconfont undefined"></i>
+  HTTP缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/data/" class="nav-link"><i class="iconfont undefined"></i>
+  数据缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/offline/" class="nav-link"><i class="iconfont undefined"></i>
+  离线缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/cdn/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN缓存
+</a></li></ul></li><li class="dropdown-item"><h4>优化方案</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/seo/" class="nav-link"><i class="iconfont undefined"></i>
+  SEO方向的优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack的性能优化
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  Canvas性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/app/" class="nav-link"><i class="iconfont undefined"></i>
+  了解常见的Web、App性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/frame/" class="nav-link"><i class="iconfont undefined"></i>
+  React、Vue框架使用性能优化方案
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端工程化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  部署
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/vite/" class="nav-link"><i class="iconfont undefined"></i>
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  WebPack
+</a></li></ul></div></div><div class="nav-item"><a href="/vue-collect/pages/expand/" class="nav-link"><i class="iconfont undefined"></i>
+  第三方拓展
+</a></div><div class="nav-item"><a href="/vue-collect/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/vue-collect/about/" class="nav-link"><i class="iconfont reco-other"></i>
+  关于
+</a></div> <a href="https://github.com//cxman1" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/vue-collect/avatar.jpg" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    晨曦
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>80</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>60</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/vue-collect/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      前端开发
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/FrontEnd/" class="nav-link"><i class="iconfont undefined"></i>
+  FrontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/GraphQL/" class="nav-link"><i class="iconfont undefined"></i>
+  GraphQL
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/推荐文档/" class="nav-link"><i class="iconfont undefined"></i>
+  推荐文档
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/浏览器相关/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      JS指南
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/basics/" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础相关
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/script/" class="nav-link"><i class="iconfont undefined"></i>
+  ECMAScript 6
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  OOP面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/design/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Vue相关</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/vue/jichu/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue基础相关
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/tuozhan/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue官方生态
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/hexin/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue.js的设计核心
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      性能优化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端缓存</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/pages/http/" class="nav-link"><i class="iconfont undefined"></i>
+  HTTP缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/data/" class="nav-link"><i class="iconfont undefined"></i>
+  数据缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/offline/" class="nav-link"><i class="iconfont undefined"></i>
+  离线缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/cdn/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN缓存
+</a></li></ul></li><li class="dropdown-item"><h4>优化方案</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/seo/" class="nav-link"><i class="iconfont undefined"></i>
+  SEO方向的优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack的性能优化
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  Canvas性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/app/" class="nav-link"><i class="iconfont undefined"></i>
+  了解常见的Web、App性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/frame/" class="nav-link"><i class="iconfont undefined"></i>
+  React、Vue框架使用性能优化方案
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端工程化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  部署
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/vite/" class="nav-link"><i class="iconfont undefined"></i>
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  WebPack
+</a></li></ul></div></div><div class="nav-item"><a href="/vue-collect/pages/expand/" class="nav-link"><i class="iconfont undefined"></i>
+  第三方拓展
+</a></div><div class="nav-item"><a href="/vue-collect/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/vue-collect/about/" class="nav-link"><i class="iconfont reco-other"></i>
+  关于
+</a></div> <a href="https://github.com//cxman1" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>《深入浅出 webpack》 读书笔记 三</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>晨曦</span>
+            
+          <span data-v-64685f0e>2021 - </span>
+          2022
+        </a></span></div></div> <div data-v-2d5f533b><main class="page"><div class="page-title" style="display:none;"><h1 class="title">《深入浅出 webpack》 读书笔记 三</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>晨曦</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2019-04-12</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>webpack</span><span class="tag-item" data-v-3b7f5bdf>性能优化</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><div class="custom-block tip"><ol><li>webpack 优化</li> <li>webpack 输出分析</li></ol></div> <h2 id="缩小文件搜索范围"><a href="#缩小文件搜索范围" class="header-anchor">#</a> 缩小文件搜索范围</h2> <p>遇到导入语句时</p> <ul><li>寻找导入对应的文件</li> <li>根据文件后缀，选择对应 loader 去解析</li></ul> <p>尽量减少上述两件事的发生，加快构建</p> <h3 id="优化-loader-配置"><a href="#优化-loader-配置" class="header-anchor">#</a> 优化 loader 配置</h3> <p>使用 <code>test</code> <code>include</code> <code>exclude</code> 三个配置来命中 loader 要应用规则的文件</p> <h3 id="优化-resolve-modules"><a href="#优化-resolve-modules" class="header-anchor">#</a> 优化 resolve.modules</h3> <p>默认是一层一层往上查找 <code>node_modules</code> 的第三方模块，可以直接指明在当前根目录下的 <code>node_modules</code></p> <h3 id="优化-resolve-mainfields"><a href="#优化-resolve-mainfields" class="header-anchor">#</a> 优化 resolve.mainFields</h3> <p>用于配置第三方文件的入口，<code>target</code> 为 <code>web</code> 或 <code>webworker</code>时，为 <code>[&quot;browser&quot;, &quot;module&quot;, &quot;main&quot;]</code>，其它情况为 <code>[&quot;module&quot;, &quot;main&quot;]</code>，为减少搜索步骤，可以指明入口文件描述字段</p> <h3 id="优化-resolve-alias"><a href="#优化-resolve-alias" class="header-anchor">#</a> 优化 resolve.alias</h3> <p>通过别名来把原路径映射为新的导入路径，减少耗时的递归操作，会影响 tree shaking，需要完整文件的库可以使用此方法如 React，Vue 等，工具类库不使用此方法如 lodash 等</p> <h3 id="优化-resolve-extensions"><a href="#优化-resolve-extensions" class="header-anchor">#</a> 优化 resolve.extensions</h3> <p>导入语句没带后缀时 webpack 会尝试加上后缀去询问文件，默认为 <code>[&quot;js&quot;, &quot;json&quot;]</code></p> <p>列表越长，越正确的在后面，尝试次数越多</p> <ul><li>后缀尝试列表要尽可能的小</li> <li>频率高的放最前面</li> <li>写导入语句时尽量加上后缀</li></ul> <h3 id="优化-module-noparse"><a href="#优化-module-noparse" class="header-anchor">#</a> 优化 module.noParse</h3> <p>可以让 webpack 忽略部分没采用模块化的文件的递归解析处理，提高构建性能，例如 JQuery， ChartJS，庞大又没有采用模块化规范，此类文件做解析没有意义</p> <h2 id="dllplugin"><a href="#dllplugin" class="header-anchor">#</a> DllPlugin</h2> <p>动态链接库，包含给其他模块调用和使用的数据</p> <ul><li>把网页依赖的基础模块抽离出来，打包到动态链接库中，可以包含多个模块</li> <li>当需要导入的模块在动态链接库中时，该模块不能在再次打包，去向动态链接库获取</li> <li>页面依赖的所有动态链接库需要被加载</li></ul> <p>加快构建的原因是复用的模块只用编译构建一次，之后会直接使用动态链接库的代码，通常是常用的第三方模块，模块不升级，动态链接库就不需要升级</p> <p><code>webpack.DllPlugin</code> 和 <code>webpack.DllReferencePlugin</code></p> <p><code>DllPlugin</code> 中的 <code>name</code> 参数必须和 <code>output.library</code> 中保持一致，<code>name</code> 会影响输出的 <code>manifest.json</code> 中的 <code>name</code> 字段的值，<code>DllReferencePlugin</code> 会去读取 <code>manifest.json</code> 中的 <code>name</code> 字段，把值的内容作为从全局变量中获取动态链接库中内容的全局变量名</p> <h2 id="happypack"><a href="#happypack" class="header-anchor">#</a> HappyPack</h2> <p>文件数量变多后，webpack 构建速度会变慢。运行在 Node.js 上的 webpack 是单线程的，需要处理的事情只能一件一件的做</p> <p>HappyPack 把任务分解成多个子进程并发执行，子进程处理完后再交给主进程。</p> <blockquote><p>由于 JS 是单线程模型，要发挥多个 CPU 威力，只能通过多进程</p></blockquote> <ul><li>将所有文件的处理都交给 <code>HappyPack/loader</code>，<code>?id='babel'</code> 告诉 <code>HappyPack</code> 使用哪个 <code>HappyPack实例</code> 来处理</li> <li><code>Plugin</code> 配置中新增 <code>HappyPack</code> 实例告诉 <code>HappyPack/loader</code> 如何处理文件，<code>id</code> 与上面对应，选项中的 <code>loaders</code> 属性和之前一致</li></ul> <p>可以开启多个子进程，默认为 3 个，多个 HappyPack 可以共享一个进程池，避免资源占用过多</p> <p>原理：</p> <ul><li>webpack 构建中最耗时的是 loader 对文件对转换操作，因为文件数多只能一个一个处理，HappyPack 核心原理是把这部分任务分解到多个进程去并行处理，从而减少总构建时间</li> <li>核心调度器的代码在主进程中，也就是运行 webpack 进程中，核心调度器会把任务分配给空闲的子进程，处理完毕后发送给核心调度器，之间的数据交换通过进程间通信 API 实现</li> <li>核心调度器收到子进程处理完毕结果后会通知 webpack 文件处理完毕</li></ul> <h2 id="paralleluglifyplugin"><a href="#paralleluglifyplugin" class="header-anchor">#</a> ParallelUglifyPlugin</h2> <p>压缩代码需要把代码解析成用 Object 表示的 AST 语法树，再去应用各种规则分析和处理 AST，导致计算量大，耗时多</p> <p><code>ParallelUglifyPlugin</code> 会开启多个子进程，把对多个文件的压缩分配给多个子进程，变成了并行执行，更快的对多个文件进行压缩</p> <h2 id="文件监听"><a href="#文件监听" class="header-anchor">#</a> 文件监听</h2> <p>原理：</p> <ul><li><p>定时获取该文件的最后编辑时间，每次都存下最后编辑时间，发现当前获取时间与保存的最后编辑时间不一致时，则认为发生了修改，<code>watchOptions.poll</code> 用于控制定时检查周期</p></li> <li><p>认为发生变化后，不会立即告诉监听者，而是先缓存起来，收集一段时间的变化后再一次性告诉监听者，<code>watchOptions.aggregateTime</code> 用于配置等待时间</p></li> <li><p>由于保存文件的路径和最后编辑时间需占用内存，定时检查会占用 CPU 和文件 I/O，所以最好减少需要监听的文件的数量和降低检查频率</p></li> <li><p>可以忽略到 node_modules 的文件，不去监听它们</p></li> <li><p><code>watchOptions.poll</code> 越小越好，降低检查频率</p></li> <li><p><code>watchOptions.aggregateTime</code> 越大越好，降低重新构建频率</p></li></ul> <p>但会感觉到监听模式的反应和灵敏度降低了</p> <h2 id="自动刷新"><a href="#自动刷新" class="header-anchor">#</a> 自动刷新</h2> <p>webpack 负责监听模块，webpack-dev-server 负责刷新浏览器</p> <p>原理，有三种方法：</p> <ol><li>借助浏览器扩展去通过浏览器 API 刷新</li> <li>往开发的网页中注入代理客户端，通过代理客户端去刷新</li> <li>把要开发的网页装进 iframe 中，通过刷新 iframe 来达到效果</li></ol> <p>DevServer 支持后两种，第 2 种是默认方法</p> <p><code>devServer.inline</code> 控制是否注入代理客户端，默认为 <code>true</code> 表示会注入，每个 chunk 都会注入代理客户端代码，因为不知道网页依赖了哪几个 chunk，就都注入了，会导致构建变慢，可以关闭 <code>inline</code>，则需要通过 <code>localhost: 8000/webpack-dev-server</code> 来访问项目，网页被装进了 iframe 中，也可以手动注入 <code>&lt;script src=&quot;http://localhost:8080/webpack-dev-server.js&quot;&gt;&lt;/script&gt;</code> 代理客户端脚本</p> <h2 id="模块热替换"><a href="#模块热替换" class="header-anchor">#</a> 模块热替换</h2> <p>不刷新网页的情况下做到实时预览，原理是当一个模块变化时，只重新编译变化的模块，再用重新输出的新模块替换老模块</p> <p>原理：</p> <p>与自动刷新相似，需要往网页注入一个代理客户端用于连接 DevServer 和网页</p> <p>当模块发生更新时，更新事件会一层一层往上传递，直到有某层接收了当前变化的模块，如果事件一直往上抛到最外层都没有文件接收它，就会直接刷新网页</p> <p>要优化模块热替换，与自动刷新一样，监听更少的文件，忽略掉 <code>node_modules</code> 下的文件，模块热替换的运行依赖在每个 chunk 中，都包含代理客户端代码，不能手动关闭 <code>inline</code> 手动注入代理客户端。</p> <h2 id="区分环境"><a href="#区分环境" class="header-anchor">#</a> 区分环境</h2> <p>开发环境和生产环境差异包括：</p> <ul><li>代码压缩</li> <li>提示开发者的提示日志</li> <li>开发时所连接的后端数据接口地址和线上环境不同</li></ul> <p>当代码中使用了 <code>process</code> 时 webpack 就自动打包进 process 代码以支持 Node.js 运行环境，这个注入的模块模仿 Node.js 中的 process</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">new</span> <span class="token class-name">DefinePlugin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token string">'process.env'</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token constant">NODE_ENV</span><span class="token operator">:</span> <span class="token constant">JSON</span><span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span><span class="token string">'production'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>在定义环境变量时的值使用 <code>JSON.stringify</code> 包裹字符串的原因是环境变量的值需要一个双引号包裹的字符串</p> <p>通过 Shell 去定义的环境变量 <code>NODE_ENV=production</code> webpack 是不认识的，对 webpack 需要处理的代码中的环境区分语句没有作用</p> <p>同时也可以区分第三方库中的环境区分代码，可以去除一些日志警告</p> <p><code>NODE_ENV</code> 与 <code>production</code> 为社区约定</p> <h2 id="压缩代码"><a href="#压缩代码" class="header-anchor">#</a> 压缩代码</h2> <p>浏览器从服务器访问网页时获取的 JS、CSS 都是文本，文件越大加载时间越长、为了提升网页加载速度和减少网络传输流量，可以对资源进行压缩，除了通过 Gzip 算法压缩外，还可以对文本本身进行压缩</p> <h3 id="压缩-js"><a href="#压缩-js" class="header-anchor">#</a> 压缩 JS</h3> <ul><li>提升加载速度</li> <li>混淆源码，使可读性变差，不利于他人分析代码</li></ul> <p>策略：</p> <ul><li>不生成 sourceMap，开启时耗时大大增加</li> <li>输出可读性较差代码</li> <li>移除注释</li> <li>移除删除代码时的警告输出语句</li> <li>剔除 console 语句，兼容 IE</li> <li>内嵌定义了只使用了一次的变量</li> <li>提取多次使用没有定义为变量的静态值</li></ul> <h3 id="压缩-css"><a href="#压缩-css" class="header-anchor">#</a> 压缩 CSS</h3> <p>可以提升加载速度和混淆源码，可使用 <code>cssnano</code></p> <h2 id="cdn-加速"><a href="#cdn-加速" class="header-anchor">#</a> CDN 加速</h2> <p>可以通过压缩来减小网络传输大小，最影响用户体验的是首屏加载速度，导致这个问题是因为网络传输耗时大，CDN 的作用就是加快网络传输</p> <p>把资源遍布世界各地，在访问时按就近加载原则从离用户最近的服务器获取资源</p> <p>做法：</p> <ul><li>针对 HTML 文件，不把 HTML 文件放到 CDN 上，放到自己服务器，同时关闭自己服务器的缓存。自己的服务器只提供 HTML 和数据接口</li> <li>静态资源 JS、CSS、图片等文件，开启 CDN 和缓存，给每个文件带上唯一的 hash 值，文件名随着文件的变化而变化，只要文件变化 url 就会变化，即使有缓存，也会重新获取</li></ul> <p>浏览器针对同一时刻同一域名的并行请求有限制，如果资源过多会阻塞加载，可以把不同资源放到不同的 CDN 服务器上去，过多域名会增加域名解析时间，根据需要权衡得失</p> <ul><li><code>output.publicPath</code> 中设置 JS 的地址</li> <li><code>css-loader.publicPath</code> 中设置被 CSS 导入的资源的的地址。</li> <li><code>WebPlugin.stylePublicPath</code> 中设置 CSS 文件的地址</li></ul> <h2 id="tree-shaking"><a href="#tree-shaking" class="header-anchor">#</a> Tree Shaking</h2> <p>剔除用不上的死代码，依赖静态的 ES6 模块化语法</p> <h2 id="提取公共代码"><a href="#提取公共代码" class="header-anchor">#</a> 提取公共代码</h2> <p>大型网站有多个页面，每个页面都是单页应用，页面间会有很多同样的代码</p> <ul><li>相同的资源会被重复加载，浪费流量和服务器成本</li> <li>每个页面加载资源大，导致首屏加载慢</li></ul> <p>好处：</p> <ul><li>减少网络传输流量，降低成本</li> <li>虽然第一次加载时得不到优化，但访问其它页面时速度将大大提升</li></ul> <h2 id="按需加载"><a href="#按需加载" class="header-anchor">#</a> 按需加载</h2> <ul><li>将网站的功能划分成一个个小功能，按照功能的相关程度分类</li> <li>将每一类合为一个 chunk，按需加载对应的 chunk</li> <li>对于用户首次加载时看到的功能不做按需加载，放到执行入口的 chunk 中，降低用户能感知的网页加载时间</li> <li>对于个别大量代码的功能点，可再对其进行按需加载</li></ul> <p>依赖 <code>babel-plugin-syntax-dynamic-import</code></p> <h2 id="prepack"><a href="#prepack" class="header-anchor">#</a> Prepack</h2> <p>代码的压缩和分块都是在网络加载层面上的，除此之外可以提升运行时的效率</p> <p>原理：</p> <ul><li>通过 Babel 把 JS 解析成 AST</li> <li>Prepack 实现了一个 JS 解析器，用于执行源码，借助这个解析器掌握源码具体如何执行，并返回执行后的输出</li></ul> <h2 id="scope-hoisting"><a href="#scope-hoisting" class="header-anchor">#</a> Scope Hoisting</h2> <p>可以让打包出来的体积更小，运行的更快</p> <p>分析出各个模块的依赖关系，尽可能把打散的模块合并到一个函数中去，由于需要分析依赖关系，所以需要采用 ES6 模块化语句</p> <h2 id="输出分析"><a href="#输出分析" class="header-anchor">#</a> 输出分析</h2> <p>需要对输出结果进行分析，以决定下一步优化方向</p> <p><code>webpack --profile --json &gt; stats.json</code> 记录耗时以 JSON 格式输出到 <code>stats.json</code></p> <p><code>webpack-bundle-analyzer</code></p></div> <footer class="page-edit" style="display:none;"><div class="edit-link"><a href="https://github.com//cxman1/edit/master/docs/articles/Webpack/_深入浅出 webpack_ 读书笔记 三.md" target="_blank" rel="noopener noreferrer">编辑</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/vue-collect/assets/js/app.65dbe37a.js" defer></script><script src="/vue-collect/assets/js/3.c628116f.js" defer></script><script src="/vue-collect/assets/js/1.c6af9e45.js" defer></script><script src="/vue-collect/assets/js/80.6515ad1d.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>前端团队工程：性能体系 | 光之晨曦🌟🌟🌟</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/vue-collect/favicon.ico">
+    <meta name="description" content="技术需要沉淀,十年方能磨一剑">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/vue-collect/assets/css/0.styles.9c971594.css" as="style"><link rel="preload" href="/vue-collect/assets/js/app.65dbe37a.js" as="script"><link rel="preload" href="/vue-collect/assets/js/3.c628116f.js" as="script"><link rel="preload" href="/vue-collect/assets/js/1.c6af9e45.js" as="script"><link rel="preload" href="/vue-collect/assets/js/18.5d930a67.js" as="script"><link rel="prefetch" href="/vue-collect/assets/js/10.49dc210d.js"><link rel="prefetch" href="/vue-collect/assets/js/11.0241e6b2.js"><link rel="prefetch" href="/vue-collect/assets/js/12.0d2455c0.js"><link rel="prefetch" href="/vue-collect/assets/js/13.edf374e0.js"><link rel="prefetch" href="/vue-collect/assets/js/14.b03f0e8c.js"><link rel="prefetch" href="/vue-collect/assets/js/15.66653b42.js"><link rel="prefetch" href="/vue-collect/assets/js/16.4940672d.js"><link rel="prefetch" href="/vue-collect/assets/js/17.33558916.js"><link rel="prefetch" href="/vue-collect/assets/js/19.1d318bc4.js"><link rel="prefetch" href="/vue-collect/assets/js/20.aacec794.js"><link rel="prefetch" href="/vue-collect/assets/js/21.3485ac8a.js"><link rel="prefetch" href="/vue-collect/assets/js/22.61a68164.js"><link rel="prefetch" href="/vue-collect/assets/js/23.5bb509b8.js"><link rel="prefetch" href="/vue-collect/assets/js/24.7cae988b.js"><link rel="prefetch" href="/vue-collect/assets/js/25.bb4941c3.js"><link rel="prefetch" href="/vue-collect/assets/js/26.7b48c5be.js"><link rel="prefetch" href="/vue-collect/assets/js/27.06391115.js"><link rel="prefetch" href="/vue-collect/assets/js/28.b1458ba3.js"><link rel="prefetch" href="/vue-collect/assets/js/29.58a1b085.js"><link rel="prefetch" href="/vue-collect/assets/js/30.53621a4a.js"><link rel="prefetch" href="/vue-collect/assets/js/31.d78395fc.js"><link rel="prefetch" href="/vue-collect/assets/js/32.76f9ef38.js"><link rel="prefetch" href="/vue-collect/assets/js/33.a7772550.js"><link rel="prefetch" href="/vue-collect/assets/js/34.78492257.js"><link rel="prefetch" href="/vue-collect/assets/js/35.35f389ea.js"><link rel="prefetch" href="/vue-collect/assets/js/36.990857ef.js"><link rel="prefetch" href="/vue-collect/assets/js/37.0785c583.js"><link rel="prefetch" href="/vue-collect/assets/js/38.63f36ade.js"><link rel="prefetch" href="/vue-collect/assets/js/39.ccfbdf6b.js"><link rel="prefetch" href="/vue-collect/assets/js/4.ac0d0ae4.js"><link rel="prefetch" href="/vue-collect/assets/js/40.534906f9.js"><link rel="prefetch" href="/vue-collect/assets/js/41.c3e68c4e.js"><link rel="prefetch" href="/vue-collect/assets/js/42.684da874.js"><link rel="prefetch" href="/vue-collect/assets/js/43.8121c3dc.js"><link rel="prefetch" href="/vue-collect/assets/js/44.17ab1a4b.js"><link rel="prefetch" href="/vue-collect/assets/js/45.cd25cb57.js"><link rel="prefetch" href="/vue-collect/assets/js/46.ca85633c.js"><link rel="prefetch" href="/vue-collect/assets/js/47.21933d59.js"><link rel="prefetch" href="/vue-collect/assets/js/48.24868115.js"><link rel="prefetch" href="/vue-collect/assets/js/49.3ed8af59.js"><link rel="prefetch" href="/vue-collect/assets/js/5.fb700727.js"><link rel="prefetch" href="/vue-collect/assets/js/50.354ff064.js"><link rel="prefetch" href="/vue-collect/assets/js/51.8c2b338b.js"><link rel="prefetch" href="/vue-collect/assets/js/52.c686d8c7.js"><link rel="prefetch" href="/vue-collect/assets/js/53.57b20e69.js"><link rel="prefetch" href="/vue-collect/assets/js/54.52ef563f.js"><link rel="prefetch" href="/vue-collect/assets/js/55.8269d62b.js"><link rel="prefetch" href="/vue-collect/assets/js/56.836f31a1.js"><link rel="prefetch" href="/vue-collect/assets/js/57.fa5c908d.js"><link rel="prefetch" href="/vue-collect/assets/js/58.99fac64e.js"><link rel="prefetch" href="/vue-collect/assets/js/59.38a1c8e4.js"><link rel="prefetch" href="/vue-collect/assets/js/6.8b581b02.js"><link rel="prefetch" href="/vue-collect/assets/js/60.01f241ff.js"><link rel="prefetch" href="/vue-collect/assets/js/61.7585e3cd.js"><link rel="prefetch" href="/vue-collect/assets/js/62.5d2acbb1.js"><link rel="prefetch" href="/vue-collect/assets/js/63.1692b0a2.js"><link rel="prefetch" href="/vue-collect/assets/js/64.b78c448c.js"><link rel="prefetch" href="/vue-collect/assets/js/65.6de8cea8.js"><link rel="prefetch" href="/vue-collect/assets/js/66.c2e8b91b.js"><link rel="prefetch" href="/vue-collect/assets/js/67.179b49f9.js"><link rel="prefetch" href="/vue-collect/assets/js/68.3acbcc4f.js"><link rel="prefetch" href="/vue-collect/assets/js/69.7269f116.js"><link rel="prefetch" href="/vue-collect/assets/js/7.fc92c449.js"><link rel="prefetch" href="/vue-collect/assets/js/70.325daea0.js"><link rel="prefetch" href="/vue-collect/assets/js/71.5f3f7b27.js"><link rel="prefetch" href="/vue-collect/assets/js/72.cbb9eeee.js"><link rel="prefetch" href="/vue-collect/assets/js/73.1bb373b5.js"><link rel="prefetch" href="/vue-collect/assets/js/74.27677327.js"><link rel="prefetch" href="/vue-collect/assets/js/75.c71706ec.js"><link rel="prefetch" href="/vue-collect/assets/js/76.77b1a3f7.js"><link rel="prefetch" href="/vue-collect/assets/js/77.878b1d47.js"><link rel="prefetch" href="/vue-collect/assets/js/78.e79c8644.js"><link rel="prefetch" href="/vue-collect/assets/js/79.40e51d12.js"><link rel="prefetch" href="/vue-collect/assets/js/8.15bebc7e.js"><link rel="prefetch" href="/vue-collect/assets/js/80.6515ad1d.js"><link rel="prefetch" href="/vue-collect/assets/js/81.430e9e16.js"><link rel="prefetch" href="/vue-collect/assets/js/82.accf7c86.js"><link rel="prefetch" href="/vue-collect/assets/js/83.d176ca6f.js"><link rel="prefetch" href="/vue-collect/assets/js/84.2b19c1b9.js"><link rel="prefetch" href="/vue-collect/assets/js/85.43182d27.js"><link rel="prefetch" href="/vue-collect/assets/js/86.c43652ad.js"><link rel="prefetch" href="/vue-collect/assets/js/87.c7d25eac.js"><link rel="prefetch" href="/vue-collect/assets/js/88.efdf28e7.js"><link rel="prefetch" href="/vue-collect/assets/js/89.5f5859a2.js"><link rel="prefetch" href="/vue-collect/assets/js/9.31803082.js"><link rel="prefetch" href="/vue-collect/assets/js/90.830dffd8.js">
+    <link rel="stylesheet" href="/vue-collect/assets/css/0.styles.9c971594.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>光之晨曦🌟🌟🌟</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>晨曦</span>
+            
+          <span data-v-64685f0e>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-collect/" class="home-link router-link-active"><img src="/vue-collect/logo.jpg" alt="光之晨曦🌟🌟🌟" class="logo"> <span class="site-name">光之晨曦🌟🌟🌟</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-collect/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      前端开发
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/FrontEnd/" class="nav-link"><i class="iconfont undefined"></i>
+  FrontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/GraphQL/" class="nav-link"><i class="iconfont undefined"></i>
+  GraphQL
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/推荐文档/" class="nav-link"><i class="iconfont undefined"></i>
+  推荐文档
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/浏览器相关/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      JS指南
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/basics/" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础相关
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/script/" class="nav-link"><i class="iconfont undefined"></i>
+  ECMAScript 6
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  OOP面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/design/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Vue相关</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/vue/jichu/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue基础相关
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/tuozhan/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue官方生态
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/hexin/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue.js的设计核心
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      性能优化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端缓存</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/pages/http/" class="nav-link"><i class="iconfont undefined"></i>
+  HTTP缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/data/" class="nav-link"><i class="iconfont undefined"></i>
+  数据缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/offline/" class="nav-link"><i class="iconfont undefined"></i>
+  离线缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/cdn/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN缓存
+</a></li></ul></li><li class="dropdown-item"><h4>优化方案</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/seo/" class="nav-link"><i class="iconfont undefined"></i>
+  SEO方向的优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack的性能优化
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  Canvas性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/app/" class="nav-link"><i class="iconfont undefined"></i>
+  了解常见的Web、App性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/frame/" class="nav-link"><i class="iconfont undefined"></i>
+  React、Vue框架使用性能优化方案
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端工程化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  部署
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/vite/" class="nav-link"><i class="iconfont undefined"></i>
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  WebPack
+</a></li></ul></div></div><div class="nav-item"><a href="/vue-collect/pages/expand/" class="nav-link"><i class="iconfont undefined"></i>
+  第三方拓展
+</a></div><div class="nav-item"><a href="/vue-collect/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/vue-collect/about/" class="nav-link"><i class="iconfont reco-other"></i>
+  关于
+</a></div> <a href="https://github.com//cxman1" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/vue-collect/avatar.jpg" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    晨曦
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>80</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>60</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/vue-collect/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      前端开发
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/FrontEnd/" class="nav-link"><i class="iconfont undefined"></i>
+  FrontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/GraphQL/" class="nav-link"><i class="iconfont undefined"></i>
+  GraphQL
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/推荐文档/" class="nav-link"><i class="iconfont undefined"></i>
+  推荐文档
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/浏览器相关/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器相关
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      JS指南
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/basics/" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础相关
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/script/" class="nav-link"><i class="iconfont undefined"></i>
+  ECMAScript 6
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  OOP面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/design/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Vue相关</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/vue/jichu/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue基础相关
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/tuozhan/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue官方生态
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/hexin/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue.js的设计核心
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      性能优化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端缓存</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/pages/http/" class="nav-link"><i class="iconfont undefined"></i>
+  HTTP缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/data/" class="nav-link"><i class="iconfont undefined"></i>
+  数据缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/offline/" class="nav-link"><i class="iconfont undefined"></i>
+  离线缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/cdn/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN缓存
+</a></li></ul></li><li class="dropdown-item"><h4>优化方案</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/seo/" class="nav-link"><i class="iconfont undefined"></i>
+  SEO方向的优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack的性能优化
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  Canvas性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/app/" class="nav-link"><i class="iconfont undefined"></i>
+  了解常见的Web、App性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/frame/" class="nav-link"><i class="iconfont undefined"></i>
+  React、Vue框架使用性能优化方案
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端工程化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  部署
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/vite/" class="nav-link"><i class="iconfont undefined"></i>
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  WebPack
+</a></li></ul></div></div><div class="nav-item"><a href="/vue-collect/pages/expand/" class="nav-link"><i class="iconfont undefined"></i>
+  第三方拓展
+</a></div><div class="nav-item"><a href="/vue-collect/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/vue-collect/about/" class="nav-link"><i class="iconfont reco-other"></i>
+  关于
+</a></div> <a href="https://github.com//cxman1" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>前端团队工程：性能体系</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>晨曦</span>
+            
+          <span data-v-64685f0e>2021 - </span>
+          2022
+        </a></span></div></div> <div data-v-2d5f533b><main class="page"><div class="page-title" style="display:none;"><h1 class="title">前端团队工程：性能体系</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>晨曦</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-03-02</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>性能优化</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><blockquote><p>摘自 winter 老师 《重学前端》</p></blockquote> <h2 id="性能总论"><a href="#性能总论" class="header-anchor">#</a> 性能总论</h2> <p>性能体系的建立可以分成以下部分：</p> <ul><li>现状评估和建立指标</li> <li>技术方案</li> <li>执行</li> <li>结果评估和监控</li></ul> <h2 id="现状评估和建立指标"><a href="#现状评估和建立指标" class="header-anchor">#</a> 现状评估和建立指标</h2> <p>想要做好性能优化，正确地评估现状和建立指标是最关键的一步，又往往是会被轻视的一步。</p> <p>性能问题可以分成很多方面，最重要的几个点是：</p> <ul><li>页面加载性能</li> <li>动画与操作性能</li> <li>内存，电量消耗</li></ul> <p><strong>在对大量的用户数据分析后得出，“页面加载性能”跟用户的流失率有非常强的关联性，而用户的流失率，正是公司业务非常看重的指标。</strong></p> <p>用什么指标来衡量页面加载性能呢？</p> <p>最容易想到的方案是“用户平均加载时间”。</p> <p>但是这个指标有严重的问题：</p> <ul><li>当加载时间低于一定数字，用户体感差别不大了，经过一定研究，这个数字大约是 1 秒</li> <li>少数超长时间加载的用户（如 2G），会极大影响整个指标，即指标不能反映大多数用户的体验</li></ul> <p>基于以上分析，设计了一个新的指标————秒开率，即一秒之内打开的用户占用户总量的百分比。</p> <h2 id="技术方案"><a href="#技术方案" class="header-anchor">#</a> 技术方案</h2> <p>有了指标，就有了优化的目标，接下来，就是技术了。</p> <p>以加载过程为例，首先简单分析一下，从输入 URL 后按下回车，到底发生了什么。</p> <p>见<a href="/articles/JavaScript/%E4%B8%80%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C%E7%9A%84">一个浏览器是如何工作的</a></p> <p>必须理解几件事：</p> <ul><li>从域名到 IP 地址，需要用 DNS 协议查询</li> <li>HTTP 协议是用 TCP 传输的，所以会有 TCP 建立连接过程</li> <li>如果使用 HTTPS，还有 HTTPS 交换证书</li> <li>每个网页还有图片等请求</li></ul> <p>网页的加载时间不但跟体积有关，还跟请求数有很大关系，最终的技术方案大约可以这样划分：</p> <p><img src="/vue-collect/assets/img/performance_optimization_technical_solution.aaf10dc6.jpg" alt="性能技术方案"></p> <p>可以看到，这里涉及的并不仅仅是前端技术，有服务端，客户端，设计师团队，所以要想做好性能优化，必须是整个业务一起考虑，才能有良好的收效。</p> <h2 id="执行"><a href="#执行" class="header-anchor">#</a> 执行</h2> <p>有了技术方案，只完成了一半的工作，接下来还需要一个执行过程。</p> <p>执行也不简单，如果说方案主要靠技术，那么执行就是靠工程实施。</p> <p>根据公司的实际情况，工程实施可能有不同的程序，把工程水平从低到高分成三个阶段：</p> <ul><li>纯管理</li> <li>制度化</li> <li>自动化</li></ul> <p>纯行政管理，是由经理用纯粹的管理手段来执行方案，比如说，作为前端团队的 Leader，组织会议，要求整个团队使用我们前面谈的技术方案。但是有一些问题，一方面，需要的行政资源不一定有，比如我没法强制让后端团队配合我，另一方面，纯粹的管理方式，团队本身的体验并不好，也不利于团队成长，最重要的是，容易造成执行不到位。这样的执行方式多数出现在非技术岗位。</p> <p>制度化执行方式是用规则代替人的命令，指定责任人，通过培训，checklist，定期 review 等具体措施来保证实施。制度化执行可以极大地减轻管理工作量，一般现代互联网公司都会采用类似的方式。但是制度化执行方式还有很大成分是依靠人的主动性的，对程序员来说，还有更好的方式：自动化。</p> <p>自动化的方式是在一些重要的操作路径上设置规则，针对我们的性能优化，有两个点适合做这件事：一个是把开发好的页面发布上线，另一个是开发好的页面 URL 投放到首页等处的链接。</p> <h2 id="结果评估和监控"><a href="#结果评估和监控" class="header-anchor">#</a> 结果评估和监控</h2> <p>执行完了之后，还要有一定的结果总结，才是一个完整的工程实施，而且，凡是工程实施，肯定要有一定长效机制，不能优化完了退化，这些都要求有线上监控机制。</p> <p>要想做线上监控，分两部分：</p> <ul><li>数据采集</li> <li>数据展现</li></ul> <p>数据采集部分，同样需要发布平台或者开发工具来配合，对性能数据来说， Performance API 非常好用，它是浏览器记录的性能数据，一般来说，我们用统一的代码把它上传到服务器端就够用了。</p> <p>数据的展现部分比较自由，可以用不同的数据可视化方案来展现性能数据，没有一定之规。一般的数据监控平台，会提供报警机制，对性能来说，报警需求不是特别强烈，但是可以设置一些条件，针对秒开率特别低的网页报警。</p> <p>有了监控，再配合一定制度，就可以保障整个团队产出的性能了。</p> <p>性能不是一个静态的事情，指标需要不断优化，技术方案还需要不断随着技术发展迭代，制度、自动化工具也需要不断改进，最终的监控平台产品也不能不做新需求，所以性能应该成为一个团队的日常工作的一部分，持续进行。</p> <h2 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h2> <p>总体思想：性能应该是基于业务和实际用户体验需求的一种工程实施，不是纯粹的技术游戏。</p> <p>性能工程体系的四个步骤：</p> <ul><li>现状评估和建立指标，建立指标应当从业务的角度考虑</li> <li>技术方案设计，技术方案应当从整体角度，基于 Profiling 的结果分析来设计</li> <li>实施，工程实施的三个层次：纯管理、制度化、工程化</li> <li>结果评估和线上监控，线上监控需要从数据采集和数据展现来个部分分别实现</li></ul></div> <footer class="page-edit" style="display:none;"><div class="edit-link"><a href="https://github.com//cxman1/edit/master/docs/articles/FrontEnd/前端团队工程：性能体系.md" target="_blank" rel="noopener noreferrer">编辑</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/vue-collect/assets/js/app.65dbe37a.js" defer></script><script src="/vue-collect/assets/js/3.c628116f.js" defer></script><script src="/vue-collect/assets/js/1.c6af9e45.js" defer></script><script src="/vue-collect/assets/js/18.5d930a67.js" defer></script>
+  </body>
+</html>
