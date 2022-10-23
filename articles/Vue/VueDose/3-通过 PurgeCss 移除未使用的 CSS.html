@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>「译」 VueDose Tip 3 - 通过 PurgeCss 移除未使用的 CSS | 光之晨曦🌟🌟🌟</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/vue-collect/favicon.ico">
+    <meta name="description" content="技术需要沉淀,十年方能磨一剑">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/vue-collect/assets/css/0.styles.9c971594.css" as="style"><link rel="preload" href="/vue-collect/assets/js/app.5ae01ac5.js" as="script"><link rel="preload" href="/vue-collect/assets/js/3.c628116f.js" as="script"><link rel="preload" href="/vue-collect/assets/js/1.c6af9e45.js" as="script"><link rel="preload" href="/vue-collect/assets/js/15.f95da86f.js" as="script"><link rel="prefetch" href="/vue-collect/assets/js/10.19aaab12.js"><link rel="prefetch" href="/vue-collect/assets/js/11.befa3640.js"><link rel="prefetch" href="/vue-collect/assets/js/12.0d2455c0.js"><link rel="prefetch" href="/vue-collect/assets/js/13.edf374e0.js"><link rel="prefetch" href="/vue-collect/assets/js/14.81d0a0d3.js"><link rel="prefetch" href="/vue-collect/assets/js/16.185600bb.js"><link rel="prefetch" href="/vue-collect/assets/js/17.bc854358.js"><link rel="prefetch" href="/vue-collect/assets/js/18.320fcb69.js"><link rel="prefetch" href="/vue-collect/assets/js/19.fa6cc27d.js"><link rel="prefetch" href="/vue-collect/assets/js/20.2a4a1ab1.js"><link rel="prefetch" href="/vue-collect/assets/js/21.70f01df6.js"><link rel="prefetch" href="/vue-collect/assets/js/22.6c0f27d3.js"><link rel="prefetch" href="/vue-collect/assets/js/23.15ee00a9.js"><link rel="prefetch" href="/vue-collect/assets/js/24.9951c34b.js"><link rel="prefetch" href="/vue-collect/assets/js/25.a3b03b02.js"><link rel="prefetch" href="/vue-collect/assets/js/26.01fbfa79.js"><link rel="prefetch" href="/vue-collect/assets/js/27.b91050ee.js"><link rel="prefetch" href="/vue-collect/assets/js/28.a5f2b637.js"><link rel="prefetch" href="/vue-collect/assets/js/29.99902add.js"><link rel="prefetch" href="/vue-collect/assets/js/30.b6b8540c.js"><link rel="prefetch" href="/vue-collect/assets/js/31.306b0b41.js"><link rel="prefetch" href="/vue-collect/assets/js/32.57be5819.js"><link rel="prefetch" href="/vue-collect/assets/js/33.a2c79b71.js"><link rel="prefetch" href="/vue-collect/assets/js/34.74bc3dda.js"><link rel="prefetch" href="/vue-collect/assets/js/35.1027d206.js"><link rel="prefetch" href="/vue-collect/assets/js/36.7a438c03.js"><link rel="prefetch" href="/vue-collect/assets/js/37.c72cd17e.js"><link rel="prefetch" href="/vue-collect/assets/js/38.3c978994.js"><link rel="prefetch" href="/vue-collect/assets/js/39.28539789.js"><link rel="prefetch" href="/vue-collect/assets/js/4.ac0d0ae4.js"><link rel="prefetch" href="/vue-collect/assets/js/40.90231e99.js"><link rel="prefetch" href="/vue-collect/assets/js/41.59d07df4.js"><link rel="prefetch" href="/vue-collect/assets/js/42.417b5dfc.js"><link rel="prefetch" href="/vue-collect/assets/js/43.5a8a8b82.js"><link rel="prefetch" href="/vue-collect/assets/js/44.dafb826d.js"><link rel="prefetch" href="/vue-collect/assets/js/45.7854b06d.js"><link rel="prefetch" href="/vue-collect/assets/js/46.e5d3e483.js"><link rel="prefetch" href="/vue-collect/assets/js/47.d0c7deef.js"><link rel="prefetch" href="/vue-collect/assets/js/48.c5160f4c.js"><link rel="prefetch" href="/vue-collect/assets/js/49.dde52cb9.js"><link rel="prefetch" href="/vue-collect/assets/js/5.fb700727.js"><link rel="prefetch" href="/vue-collect/assets/js/50.07906adf.js"><link rel="prefetch" href="/vue-collect/assets/js/51.60450d4a.js"><link rel="prefetch" href="/vue-collect/assets/js/52.a93996a3.js"><link rel="prefetch" href="/vue-collect/assets/js/53.b8741d49.js"><link rel="prefetch" href="/vue-collect/assets/js/54.1e8c6bff.js"><link rel="prefetch" href="/vue-collect/assets/js/55.67c53a81.js"><link rel="prefetch" href="/vue-collect/assets/js/56.cf0d8f10.js"><link rel="prefetch" href="/vue-collect/assets/js/57.f21e44c1.js"><link rel="prefetch" href="/vue-collect/assets/js/58.d16c3530.js"><link rel="prefetch" href="/vue-collect/assets/js/59.d7521983.js"><link rel="prefetch" href="/vue-collect/assets/js/6.8b581b02.js"><link rel="prefetch" href="/vue-collect/assets/js/60.ed92569e.js"><link rel="prefetch" href="/vue-collect/assets/js/61.aacb20a9.js"><link rel="prefetch" href="/vue-collect/assets/js/62.cf6ba9aa.js"><link rel="prefetch" href="/vue-collect/assets/js/63.d919f1af.js"><link rel="prefetch" href="/vue-collect/assets/js/64.31330051.js"><link rel="prefetch" href="/vue-collect/assets/js/65.911dc6f6.js"><link rel="prefetch" href="/vue-collect/assets/js/66.2a5c4288.js"><link rel="prefetch" href="/vue-collect/assets/js/67.7183d6a4.js"><link rel="prefetch" href="/vue-collect/assets/js/68.471aed45.js"><link rel="prefetch" href="/vue-collect/assets/js/69.7dee0e96.js"><link rel="prefetch" href="/vue-collect/assets/js/7.fc92c449.js"><link rel="prefetch" href="/vue-collect/assets/js/70.61713d1c.js"><link rel="prefetch" href="/vue-collect/assets/js/71.78d0bd55.js"><link rel="prefetch" href="/vue-collect/assets/js/72.9b85b472.js"><link rel="prefetch" href="/vue-collect/assets/js/73.fa700790.js"><link rel="prefetch" href="/vue-collect/assets/js/74.8f883938.js"><link rel="prefetch" href="/vue-collect/assets/js/75.a6302d63.js"><link rel="prefetch" href="/vue-collect/assets/js/76.f31d2907.js"><link rel="prefetch" href="/vue-collect/assets/js/77.b0a2ee1a.js"><link rel="prefetch" href="/vue-collect/assets/js/78.ed33528a.js"><link rel="prefetch" href="/vue-collect/assets/js/79.baad3128.js"><link rel="prefetch" href="/vue-collect/assets/js/8.2c8cbcc0.js"><link rel="prefetch" href="/vue-collect/assets/js/80.56c5e40a.js"><link rel="prefetch" href="/vue-collect/assets/js/81.afe86aea.js"><link rel="prefetch" href="/vue-collect/assets/js/82.ad899845.js"><link rel="prefetch" href="/vue-collect/assets/js/83.169d43e0.js"><link rel="prefetch" href="/vue-collect/assets/js/84.c5c20036.js"><link rel="prefetch" href="/vue-collect/assets/js/85.d5ceda92.js"><link rel="prefetch" href="/vue-collect/assets/js/86.e9f7a603.js"><link rel="prefetch" href="/vue-collect/assets/js/87.34cdd4a3.js"><link rel="prefetch" href="/vue-collect/assets/js/88.630fe4b7.js"><link rel="prefetch" href="/vue-collect/assets/js/89.fe75a7f0.js"><link rel="prefetch" href="/vue-collect/assets/js/9.0331b807.js"><link rel="prefetch" href="/vue-collect/assets/js/90.a509bb86.js"><link rel="prefetch" href="/vue-collect/assets/js/91.470eaddb.js"><link rel="prefetch" href="/vue-collect/assets/js/92.c9f964e3.js">
+    <link rel="stylesheet" href="/vue-collect/assets/css/0.styles.9c971594.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-2d5f533b><div data-v-2d5f533b><div id="loader-wrapper" class="loading-wrapper" data-v-d48f4d20 data-v-2d5f533b data-v-2d5f533b><div class="loader-main" data-v-d48f4d20><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div><div data-v-d48f4d20></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-64685f0e data-v-2d5f533b data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>光之晨曦🌟🌟🌟</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>晨曦</span>
+            
+          <span data-v-64685f0e>2021 - </span>
+          2022
+        </a></span></div></div> <div class="hide" data-v-2d5f533b><header class="navbar" data-v-2d5f533b><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vue-collect/" class="home-link router-link-active"><img src="/vue-collect/logo.jpg" alt="光之晨曦🌟🌟🌟" class="logo"> <span class="site-name">光之晨曦🌟🌟🌟</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/vue-collect/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      前端开发
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/FrontEnd/" class="nav-link"><i class="iconfont undefined"></i>
+  FrontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/GraphQL/" class="nav-link"><i class="iconfont undefined"></i>
+  GraphQL
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/JS基础语法/" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础语法
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/浏览器相关/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器相关
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/推荐文档/" class="nav-link"><i class="iconfont undefined"></i>
+  推荐文档
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      JS指南
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/basics/" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础相关
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/script/" class="nav-link"><i class="iconfont undefined"></i>
+  ECMAScript 6
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  OOP面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/design/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Vue相关</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/vue/jichu/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue基础相关
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/tuozhan/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue官方生态
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/hexin/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue.js的设计核心
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      性能优化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端缓存</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/pages/http/" class="nav-link"><i class="iconfont undefined"></i>
+  HTTP缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/data/" class="nav-link"><i class="iconfont undefined"></i>
+  数据缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/offline/" class="nav-link"><i class="iconfont undefined"></i>
+  离线缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/cdn/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN缓存
+</a></li></ul></li><li class="dropdown-item"><h4>优化方案</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/seo/" class="nav-link"><i class="iconfont undefined"></i>
+  SEO方向的优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack的性能优化
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  Canvas性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/app/" class="nav-link"><i class="iconfont undefined"></i>
+  了解常见的Web、App性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/frame/" class="nav-link"><i class="iconfont undefined"></i>
+  React、Vue框架使用性能优化方案
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端工程化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  部署
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/vite/" class="nav-link"><i class="iconfont undefined"></i>
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  WebPack
+</a></li></ul></div></div><div class="nav-item"><a href="/vue-collect/pages/expand/" class="nav-link"><i class="iconfont undefined"></i>
+  第三方拓展
+</a></div><div class="nav-item"><a href="/vue-collect/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/vue-collect/about/" class="nav-link"><i class="iconfont reco-other"></i>
+  关于
+</a></div> <a href="https://github.com//cxman1" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask" data-v-2d5f533b></div> <aside class="sidebar" data-v-2d5f533b><div class="personal-info-wrapper" data-v-ca798c94 data-v-2d5f533b><img src="/vue-collect/avatar.jpg" alt="author-avatar" class="personal-img" data-v-ca798c94> <h3 class="name" data-v-ca798c94>
+    晨曦
+  </h3> <div class="num" data-v-ca798c94><div data-v-ca798c94><h3 data-v-ca798c94>82</h3> <h6 data-v-ca798c94>文章</h6></div> <div data-v-ca798c94><h3 data-v-ca798c94>61</h3> <h6 data-v-ca798c94>标签</h6></div></div> <hr data-v-ca798c94></div> <nav class="nav-links"><div class="nav-item"><a href="/vue-collect/" class="nav-link"><i class="iconfont undefined"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      前端开发
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/categories/CSS/" class="nav-link"><i class="iconfont undefined"></i>
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/FrontEnd/" class="nav-link"><i class="iconfont undefined"></i>
+  FrontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/GraphQL/" class="nav-link"><i class="iconfont undefined"></i>
+  GraphQL
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/JS基础语法/" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础语法
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/TypeScript/" class="nav-link"><i class="iconfont undefined"></i>
+  TypeScript
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Vue/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/数据结构与算法/" class="nav-link"><i class="iconfont undefined"></i>
+  数据结构与算法
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/浏览器相关/" class="nav-link"><i class="iconfont undefined"></i>
+  浏览器相关
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/categories/推荐文档/" class="nav-link"><i class="iconfont undefined"></i>
+  推荐文档
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      JS指南
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/basics/" class="nav-link"><i class="iconfont undefined"></i>
+  JS基础相关
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/script/" class="nav-link"><i class="iconfont undefined"></i>
+  ECMAScript 6
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  OOP面向对象编程
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/design/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript设计模式
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端框架
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>Vue相关</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/vue/jichu/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue基础相关
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/tuozhan/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue官方生态
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/vue/hexin/" class="nav-link"><i class="iconfont undefined"></i>
+  Vue.js的设计核心
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      性能优化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>前端缓存</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/pages/http/" class="nav-link"><i class="iconfont undefined"></i>
+  HTTP缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/data/" class="nav-link"><i class="iconfont undefined"></i>
+  数据缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/offline/" class="nav-link"><i class="iconfont undefined"></i>
+  离线缓存
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/pages/cdn/" class="nav-link"><i class="iconfont undefined"></i>
+  CDN缓存
+</a></li></ul></li><li class="dropdown-item"><h4>优化方案</h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/vue-collect/seo/" class="nav-link"><i class="iconfont undefined"></i>
+  SEO方向的优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack的性能优化
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  Canvas性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/app/" class="nav-link"><i class="iconfont undefined"></i>
+  了解常见的Web、App性能优化方案
+</a></li><li class="dropdown-subitem"><a href="/vue-collect/frame/" class="nav-link"><i class="iconfont undefined"></i>
+  React、Vue框架使用性能优化方案
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端工程化
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  部署
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/git/" class="nav-link"><i class="iconfont undefined"></i>
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/vite/" class="nav-link"><i class="iconfont undefined"></i>
+  Vite
+</a></li><li class="dropdown-item"><!----> <a href="/vue-collect/pack/webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  WebPack
+</a></li></ul></div></div><div class="nav-item"><a href="/vue-collect/pages/expand/" class="nav-link"><i class="iconfont undefined"></i>
+  第三方拓展
+</a></div><div class="nav-item"><a href="/vue-collect/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><a href="/vue-collect/about/" class="nav-link"><i class="iconfont reco-other"></i>
+  关于
+</a></div> <a href="https://github.com//cxman1" target="_blank" rel="noopener noreferrer" class="repo-link"><i class="iconfont reco-github"></i>
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-64685f0e data-v-2d5f533b><h3 class="title" style="display:none;" data-v-64685f0e data-v-64685f0e>「译」 VueDose Tip 3 - 通过 PurgeCss 移除未使用的 CSS</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-64685f0e data-v-64685f0e><input type="password" value="" data-v-64685f0e> <span data-v-64685f0e>Konck! Knock!</span> <button data-v-64685f0e>OK</button></label> <div class="footer" style="display:none;" data-v-64685f0e data-v-64685f0e><span data-v-64685f0e><i class="iconfont reco-theme" data-v-64685f0e></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-64685f0e>vuePress-theme-reco</a></span> <span data-v-64685f0e><i class="iconfont reco-copyright" data-v-64685f0e></i> <a data-v-64685f0e><span data-v-64685f0e>晨曦</span>
+            
+          <span data-v-64685f0e>2021 - </span>
+          2022
+        </a></span></div></div> <div data-v-2d5f533b><main class="page"><div class="page-title" style="display:none;"><h1 class="title">「译」 VueDose Tip 3 - 通过 PurgeCss 移除未使用的 CSS</h1> <div data-v-3b7f5bdf><i class="iconfont reco-account" data-v-3b7f5bdf><span data-v-3b7f5bdf>晨曦</span></i> <i class="iconfont reco-date" data-v-3b7f5bdf><span data-v-3b7f5bdf>2020-01-05</span></i> <!----> <i class="iconfont reco-tag tags" data-v-3b7f5bdf><span class="tag-item" data-v-3b7f5bdf>Vue 2</span><span class="tag-item" data-v-3b7f5bdf>VueDose</span><span class="tag-item" data-v-3b7f5bdf>性能优化</span><span class="tag-item" data-v-3b7f5bdf>文章翻译</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><p>我们可以通过不同的方式处理 Web 性能，其中之一就是移除所有我们未在 App 中使用的 JS 和 CSS。</p> <p>就 CSS 而言，当我们使用 <code>Bootstrap</code>，<code>Bulma</code> 或者 <code>Tailwind</code> 之类的框架，以及面对大型或旧型项目时，这一点尤为重要。</p> <p><code>PurgeCSS</code> 是一个通过应用字符串比较来移除未使用的 CSS 的工具。它有许多的优点，也有一些警告，所以请注意稍后的白名单部分。</p> <p>例如，<a href="https://vuedose.tips/" target="_blank" rel="noopener noreferrer">VueDose 的官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>是使用 <code>Tailwind</code> 在 <code>Nuxt</code> 上（静态）构建的，并使用了 <code>PurgeCSS</code> 来优化生成的 CSS。</p> <p>如果我禁用了 <code>PurgeCSS</code>，你可以看到 <code>Tailwind</code> CSS 为 <strong>485KB</strong>。</p> <p><img src="/vue-collect/assets/img/without_PurgeCSS.58762129.png" alt="without_PurgeCSS"></p> <p>如果我激活它，它<strong>会减少到 16KB</strong>。</p> <p><img src="/vue-collect/assets/img/with_PurgeCSS.f80f5451.png" alt="with_PurgeCSS"></p> <p>每个项目的 <code>PurgeCSS</code> 配置可能会不同。可以将其设置为 <code>webpack</code> 插件或者 <code>postcss</code> 插件。</p> <p>对于 <code>VueDose</code>，我将 <code>PurgeCSS</code> 作为 <code>postcss</code> 插件。所以我的 <code>postcss.config.js</code> 文件具有以下的内容：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> purgecss <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;@fullhuman/postcss-purgecss&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> plugins <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">...</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">&quot;production&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    <span class="token function">purgecss</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      content<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;./layouts/**/*.vue&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;./components/**/*.vue&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;./pages/**/*.vue&quot;</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      whitelist<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;html&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;body&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      whitelistPatternsChildren<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token regex">/^token/</span><span class="token punctuation">,</span> <span class="token regex">/^pre/</span><span class="token punctuation">,</span> <span class="token regex">/^code/</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span> plugins <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>基本上，你所需要做的就是使用 <code>content</code> 属性去配置在哪寻找匹配的类。</p> <p>并且，你希望将某些类或者标签列入白名单。你至少需要在 <code>html</code> 和 <code>body</code>，以及<strong>任何动态类</strong>中执行此操作。</p> <p>就我而言，我使用 <a href="https://prismjs.com/" target="_blank" rel="noopener noreferrer">prismjs<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 来高亮代码块，并且它加了一些 <code>token</code> 类，在 <code>pre</code> 和 <code>code</code> 标签中的样式也是如此。为了排除它们，我需要使用 <code>whitelistPatternsChildren</code> 属性。</p> <p>此外，<code>Tailwind</code> 需要一个 <a href="https://tailwindcss.com/docs/controlling-file-size/#removing-unused-css-with-purgecss" target="_blank" rel="noopener noreferrer"><code>自定义提取器</code><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>才能与 <code>PurgeCSS</code> 一起正常使用。总而言之，<code>VudDose</code> 的整个 <code>postcss.config.js</code> 文件具有以下的内容：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">const</span> join <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;path&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>join<span class="token punctuation">;</span>
+<span class="token keyword">const</span> tailwindJS <span class="token operator">=</span> <span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">&quot;tailwind.js&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> purgecss <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;@fullhuman/postcss-purgecss&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">class</span> <span class="token class-name">TailwindExtractor</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token function">extract</span><span class="token punctuation">(</span><span class="token parameter">content</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> content<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span><span class="token regex">/[A-Za-z0-9-_:\/]+/g</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">const</span> plugins <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;tailwindcss&quot;</span><span class="token punctuation">)</span><span class="token punctuation">(</span>tailwindJS<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;autoprefixer&quot;</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">&quot;production&quot;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  plugins<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>
+    <span class="token function">purgecss</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      content<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;./layouts/**/*.vue&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;./components/**/*.vue&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;./pages/**/*.vue&quot;</span>
+      <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      whitelist<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;html&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;body&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      whitelistPatternsChildren<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token regex">/^token/</span><span class="token punctuation">,</span> <span class="token regex">/^pre/</span><span class="token punctuation">,</span> <span class="token regex">/^code/</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      extractors<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          extractor<span class="token operator">:</span> TailwindExtractor<span class="token punctuation">,</span>
+          extensions<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">&quot;html&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+  plugins
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br></div></div><h3 id="原文链接"><a href="#原文链接" class="header-anchor">#</a> <a href="https://vuedose.tips/tips/remove-unused-css-with-purge-css" target="_blank" rel="noopener noreferrer">原文链接<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></h3></div> <footer class="page-edit" style="display:none;"><div class="edit-link"><a href="https://github.com//cxman1/edit/master/docs/articles/Vue/VueDose/3-通过 PurgeCss 移除未使用的 CSS.md" target="_blank" rel="noopener noreferrer">编辑</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <!----></footer> <!----> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div></div></div>
+    <script src="/vue-collect/assets/js/app.5ae01ac5.js" defer></script><script src="/vue-collect/assets/js/3.c628116f.js" defer></script><script src="/vue-collect/assets/js/1.c6af9e45.js" defer></script><script src="/vue-collect/assets/js/15.f95da86f.js" defer></script>
+  </body>
+</html>
